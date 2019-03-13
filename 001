@@ -1,0 +1,39 @@
+class CLine{
+	protected int leng;//長度
+
+CLine(int l){
+	this.leng = l;
+}
+
+public void ShowLine() {
+	System.out.println("\n****直線****");
+	System.out.println("直線長度 = " + leng);
+	}
+}
+
+class CRectangle extends CLine{
+	private int wide;//寬度
+	
+	CRectangle(int l , int w){
+		super(l);
+		this.wide = w;
+	}
+	public void ShowRec() {
+		System.out.println("\n****矩形****");
+		System.out.println("矩形長度 = " + leng);
+		System.out.println("矩形寬度 = " + wide);
+		int peri = (leng + wide) * 2;
+		int area = leng * wide;
+		System.out.println("矩形周長 = " + peri );
+		System.out.println("矩形面積 = " + area );
+	}
+}
+
+public class J713 {
+	public static void main(String[]args) {
+		CLine sha1 = new CLine(20);
+		sha1.ShowLine();
+		CRectangle sha2 = new CRectangle(10,5);
+		sha2.ShowRec();
+	}
+}
